@@ -13,7 +13,7 @@ namespace Scripts {
 
             const remainingTimeToNextSaveFromLogin = remainingTimeToNextSave + Orion.Now();
             Shared.AddVar('remainingTimeToNextSaveFromLogin', remainingTimeToNextSaveFromLogin);
-            Orion.Print(`dalsi Save bude za ${Scripts.TimeUtils.parseTimeToHourMinuteSecString(remainingTimeToNextSave)}`);
+            Orion.Print(`Next Save will be for ${Scripts.TimeUtils.parseTimeToHourMinuteSecString(remainingTimeToNextSave)}`);
         }
 
         static updatePlayerHp() {
@@ -53,7 +53,7 @@ namespace Scripts {
                     continue;
                 }
 
-                //Serialy se na serveru recykluji celkem casto, takze pro overeni i grafika, uvidime.
+                //Serials are recycled quite often on the server, so we will see the graphics for verification.
                 if (
                     doneList.some((o) => {
                         o.serial === char.Serial() && o.graphic === char.Graphic();
